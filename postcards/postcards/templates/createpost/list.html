@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block title %} Комиссар открыткин {% endblock %}
+
+
+{% block content %}
+
+Ваша ЗАМЕЧАТЕЛЬНАЯ открытка скоро появится ЗДЕСЬ!!!<br>
+<!--<img src="https://cs10.pikabu.ru/post_img/2018/08/09/10/og_og_1533834007246232854.jpg" width=730 height=400 border = 3</img>-->
+<img src="https://cs10.pikabu.ru/post_img/2018/08/09/10/og_og_1533834007246232854.jpg" width=330 height=170 border = 3</img>
+<br>
+
+<form>
+<form action="#" method="post" enctype="multipart/form-data">
+			<div>
+				<p>Имя</p>
+				<input placeholder="Имя" tabindex="1" name="username" type="text" />
+			</div>
+			<div>
+				<p>Пароль</p>
+				<input tabindex="2" name="userpass" type="password" />
+			</div>
+			<div>
+				<p>Телефон</p>
+				<input tabindex="3" name="userphone" type="tel" />
+			</div>
+			<div>
+				<p>Пол</p>
+				<div>
+					<input tabindex="4" checked type="radio" name="gender" value="male" /> Мужской
+				</div>
+				<div>
+					<input tabindex="4" type="radio" name="gender" value="female" /> Женский
+				</div>
+			</div>
+			<div>
+				<p>Имущество</p>
+				<div>
+					<input tabindex="5" checked type="checkbox" name="bike" value="yes" /> Велик
+				</div>
+				<div>
+					<input tabindex="6" type="checkbox" name="car" value="yes" /> Машина
+				</div>
+				<div>
+					<input tabindex="7" disabled type="checkbox" name="house" value="yes" /> Дом
+				</div>
+			</div>
+			<div>
+				<p>Дополнительная информация</p>
+				<textarea tabindex="8" name="text"></textarea>
+			</div>
+			<div>
+				<p>Прикрепить фото</p>
+				<input tabindex="9" type="file" />
+			</div>
+			<div>
+				<p>Любимый цвет</p>
+				<select tabindex="10" name="color">
+					<option value="red">Красный</option>
+					<option value="green">Зеленый</option>
+					<option selected value="yellow">Желтый</option>
+				</select>
+			</div>
+			<div>
+				<p>Действия</p>
+				<button tabindex="11" type="submit">Отправить</button>
+				<button tabindex="12" type="reset">Очистить</button>
+			</div>
+		</form>
+</form>
+
+{% endblock %}
+
+{% block what %}  ВеРсТаЮ {% endblock %}

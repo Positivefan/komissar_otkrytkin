@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Комиссар открыткин{% endblock %}</title>
+    <style type="text/css">
+   body {
+    background-image: url(https://i.pinimg.com/originals/c6/25/8c/c6258c250fd03b6e4fa5649b10e85c8c.jpg);
+    background-repeat: repeat;
+
+   }
+   /* unvisited link */
+a:link {
+  color: hotpink;
+  text-decoration: none;
+
+}
+
+/* visited link */
+a:visited {
+  color: green;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+  text-decoration: none;
+}
+  </style>
+    <div align="right" style="font: 900 20pt/20pt sans-serif; color:#000000">
+
+        {% if user.is_authenticated %}
+<!--        <li><a href="{% url 'account_email' %}">Change E-mail</a></li>-->
+            Добро пожаловать, <span style="font: 900 20pt/20pt sans-serif; color:#ff3333; background-color:#00ff00;">{{user.username}} <a href="{% url 'account_logout' %}">Выход</a></span>
+        {% else %}
+            <a href="{% url 'account_login' %}">Вход</a>
+            <a href="{% url 'account_signup' %}">Регистрация</a>
+        {% endif %}
+
+
+        </a>
+    </div>
+</head>
+
+
+
+<body>
+
+    <h1 style="font: bold 30pt/50pt sans-serif;"> {% block what %} Создай свою открытку! {% endblock %} </h1>
+
+    <p style="font: 900 25pt/50pt sans-serif; color:#aa00ff;"> {% block content %} Создай свою открытку! WHAT {% endblock %}</p>
+
+</body>
+</html>

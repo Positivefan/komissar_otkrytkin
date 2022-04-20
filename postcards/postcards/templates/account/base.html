@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block head_title %}Комиссар{% endblock %}</title>
+    {% block extra_head %}
+    {% endblock %}
+      <style type="text/css">
+   body {
+    background-image: url(https://i.pinimg.com/originals/c6/25/8c/c6258c250fd03b6e4fa5649b10e85c8c.jpg);
+    background-repeat: repeat;
+   }
+   a {
+   font-size: 20px;
+   color = white;
+   text-decoration: none;
+   }
+   .menu {
+    text-align: center;
+    vertical-align: middle;
+    width: 230px;
+    background: #ff00ffbb;
+    padding: 10px;
+    right-padding: 10px;
+
+    border: solid 1px black;
+    float: center;
+    position: absolute;
+    top: 20%;
+    left: 42%;
+   }
+
+
+  </style>
+
+
+  </head>
+
+  <body>
+    {% block body %}
+
+<!--    {% if messages %}-->
+<!--    <div align="center">-->
+<!--      <strong>Messages:</strong>-->
+<!--      <ul>-->
+<!--        {% for message in messages %}-->
+<!--        <li>{{message}}</li>-->
+<!--        {% endfor %}-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--    {% endif %}-->
+<!--<br><br><br><br><br><br><br><br><br><br><br>-->
+    <div class="menu">
+<!--      <strong>Menu:</strong>-->
+<!--      <ul>-->
+<!--        {% if user.is_authenticated %}-->
+<!--&lt;!&ndash;        <li><a href="{% url 'account_email' %}">Change E-mail</a></li>&ndash;&gt;-->
+<!--        <li><a href="{% url 'account_logout' %}">Sign Out</a></li>-->
+<!--        {% else %}-->
+<!--        <li><a href="{% url 'account_login' %}">Sign In</a></li>-->
+<!--        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>-->
+<!--        {% endif %}-->
+<!--      </ul>-->
+
+
+    {% block content %}
+    {% endblock %}
+    {% endblock %}
+    {% block extra_body %}
+    {% endblock %}
+      </div>
+  </body>
+</html>
